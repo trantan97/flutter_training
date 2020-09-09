@@ -221,6 +221,7 @@ class CustomContainer extends StatelessWidget {
   final Widget child;
   final double width;
   final double height;
+  final double radius;
 
   const CustomContainer({
     Key key,
@@ -228,6 +229,7 @@ class CustomContainer extends StatelessWidget {
     this.width = 40,
     this.height = 40,
     this.child,
+    this.radius = 15,
   }) : super(key: key);
 
   @override
@@ -237,7 +239,7 @@ class CustomContainer extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(radius),
       ),
       child: child,
     );
